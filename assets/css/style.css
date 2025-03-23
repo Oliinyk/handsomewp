@@ -393,15 +393,15 @@ h6 {
     }
 }
 @media (min-width: 768px) {
-    .container {
+    /* .container {
         max-width: 1180px;
-    }
+    } */
     .text-holder {
         font-size: 22px;
     }
 
     .section-title {
-        font-size: 30px;
+        font-size: 44px;
         margin-bottom: 44px;
     }
     .section-integrations {
@@ -433,5 +433,53 @@ h6 {
 
     .footer .mail-name {
         font-size: 40px;
+    }
+}
+
+
+
+.img-fluid {
+    max-width: 100%;
+}
+/* section-img-text */
+.section-img-text {
+    background-color: var(--dark);
+    border-top: 6px solid var(--primary-color);
+}
+.section-img-text .section-title {
+    color: var(--white);
+}
+.section-img-text .img-text-item {
+    display: flex;
+    grid-column-gap: 3rem;
+    margin: 0 0 50px;
+}
+.section-img-text .img-text-item:nth-child(2n) .text-holder {
+    padding-right: 20px;
+}
+.section-img-text .img-text-item:nth-child(2n+1) .text-holder {
+    padding-left: 20px;
+}
+.section-img-text .item-title {
+    color: var(--primary-color);
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.section-img-text .text-holder {
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.5;
+    width: 45%;
+}
+.section-img-text .img-holder {
+    width: 55%;
+}
+@media (min-width: 768px) {
+    .section-img-text .item-title {
+        font-size: 30px;
+    }
+    .section-img-text .text-holder {
+        font-size: 18px;
     }
 }
