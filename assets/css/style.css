@@ -11,7 +11,6 @@
     --primary-dark: #181818;
     --dark: #303030;
 }
-
 iframe, object, embed {
     border: none;
     width: 100%;
@@ -24,6 +23,7 @@ img {
     image-orientation: from-image;
 }
 .img-fluid {
+    height: auto;
     max-width: 100%;
 }
 html, body {
@@ -32,6 +32,7 @@ html, body {
     position: relative;
     margin: 0;
     font-family: 'Barlow', sans-serif;
+    font-size: 18px;
     font-weight: 400;
     color: var(--primary-dark);
     overflow-x: hidden;
@@ -71,15 +72,15 @@ h6 {
     font-family: 'Barlow', sans-serif;
     display: block;
     border-radius: 39px;
-    padding: 20px 17px;
-    font-size: 18px;
+    padding: 20px 30px;
+    font-size: 20px;
     line-height: 1;
     font-weight: 600;
     width: 100%;
     height: auto;
-    max-width: 248px;
+    max-width: max-content;
     border: none;
-    color: #303030;
+    color: var(--dark);
     background: #FFC230;
     box-shadow: 0px 1px 0px #FFD776, 0px 5px 0px #A07715;
     margin: 0;
@@ -90,14 +91,14 @@ h6 {
     transition: .2s all;
 }
 .transparent-btn {
-    color: var(--primary-color);
+    color: var(--white);
     background-color: transparent;
     border: 2px solid var(--primary-color);
     box-shadow: none;
 }
 .btn:hover {
     opacity: 1;
-    color: #303030;
+    color: var(--dark);
 }
 .btn::after {
     background: var(--white);
@@ -122,16 +123,7 @@ h6 {
 .transparent-btn:hover {
     color: var(--primary-color);
 }
-@keyframes loader-btn {
-    0%,
-    80%,
-    100% {
-        box-shadow: 0 2.5em 0 calc((2.5em - 1em) * -1);
-    }
-    40% {
-        box-shadow: 0 2.5em 0 0;
-    }
-}
+
 .bold {
     font-weight: 700;
 }
@@ -141,12 +133,28 @@ h6 {
 .main_svg[hidden] {
     display: none !important;
 }
+.highlight {
+    position: relative;
+}
+.highlight::after {
+    position: absolute;
+    content: '';
+    background-color: var(--primary-color);
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 10px;
+    z-index: -1;
+}
 .container {
+    position: relative;
     max-width: 970px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
 }
+
+
 .header {
     padding: 12px 0;
 }
