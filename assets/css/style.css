@@ -441,45 +441,184 @@ h6 {
 .img-fluid {
     max-width: 100%;
 }
+.white-text {
+    color: var(--white);
+}
 /* section-img-text */
 .section-img-text {
     background-color: var(--dark);
     border-top: 6px solid var(--primary-color);
+}
+.section-img-text .inner-wrap {
+    max-width: 500px;
+    margin: 0 auto;
 }
 .section-img-text .section-title {
     color: var(--white);
 }
 .section-img-text .img-text-item {
     display: flex;
-    grid-column-gap: 3rem;
-    margin: 0 0 50px;
+    flex-wrap: wrap;
+    margin: 0 0 40px;
 }
-.section-img-text .img-text-item:nth-child(2n) .text-holder {
-    padding-right: 20px;
+.section-img-text .img-text-item:nth-child(2n) {
+    flex-direction: column-reverse;
 }
-.section-img-text .img-text-item:nth-child(2n+1) .text-holder {
-    padding-left: 20px;
+.section-img-text .img-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px;
 }
 .section-img-text .item-title {
     color: var(--primary-color);
     font-size: 20px;
     line-height: 1.4;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .section-img-text .text-holder {
     color: var(--white);
     font-size: 16px;
     line-height: 1.5;
-    width: 45%;
 }
-.section-img-text .img-holder {
-    width: 55%;
+.section-img-text .btn-wrap {
+    padding: 17px 0 0;
 }
+.section-ico-text .btn-wrap {
+    padding: 40px 0 0;
+}
+.section-img-text .btn-wrap,
+.section-ico-text .btn-wrap {
+    display: flex;
+    justify-content: center;
+}
+.section-img-text .btn-wrap .btn,
+.section-ico-text .btn-wrap .btn {
+    max-width: 180px;
+}
+/* section-ico-text */
+.section-ico-text {
+    background-color: var(--dark);
+}
+.section-ico-text .section-title {
+    color: var(--primary-color);
+}
+.section-ico-text .inner-wrap {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.section-ico-text .ico-text-item {
+    display: flex;
+}
+.section-ico-text .ico-holder {
+    height: 60px;
+    width: 60px;
+}
+.section-ico-text .item-title {
+    color: var(--primary-color);
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+.section-ico-text .text-holder {
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 0 0 20px;
+}
+/* section-guarantee */
+.section-guarantee {
+    background-color: var(--gray-light);
+}
+.guarantee-item {
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px 28px;
+}
+.section-guarantee .text-holder {
+    line-height: 1.5;
+    margin: 25px 0 0;
+}
+.section-guarantee .img-holder {
+    margin: 0 auto;
+}
+.section-guarantee .img-holder img {
+    max-width: 130px;
+}
+.section-guarantee .text-holder p + p {
+    margin: 15px 0 0;
+}
+
 @media (min-width: 768px) {
+    .section-img-text .inner-wrap {
+        max-width: 100%;
+    }
+    .section-img-text .img-text-item {
+        flex-wrap: nowrap;
+        grid-column-gap: 3rem;
+        margin: 0 0 50px;
+    }
+    .section-img-text .img-holder {
+        width: 55%;
+        margin: 0;
+    }
+    .section-img-text .img-text-item:nth-child(2n) {
+        flex-direction: row;
+    }
+    .section-img-text .img-text-item:nth-child(2n) .text-holder {
+        padding-right: 20px;
+    }
+    .section-img-text .img-text-item:nth-child(2n+1) .text-holder {
+        padding-left: 20px;
+    }
+    .section-img-text .text-holder {
+        width: 45%;
+    }
     .section-img-text .item-title {
         font-size: 30px;
+        margin-bottom: 20px;
     }
     .section-img-text .text-holder {
         font-size: 18px;
     }
+    .section-ico-text .inner-wrap {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 25px;
+        max-width: 100%;
+    }
+    .section-ico-text .item-title {
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+    .section-ico-text .text-holder {
+        font-size: 18px;
+        padding: 10px 0 0 40px;
+    }
+    .section-ico-text .ico-holder {
+        height: 60px;
+        width: 60px;
+    }
+
+    .section-guarantee .guarantee-item {
+        padding: 45px 48px;
+    }
+    .section-guarantee .img-holder img {
+        max-width: 100%;
+    }
+    .section-guarantee .text-holder {
+        flex: 1 1 0;
+        font-size: 18px;
+        padding: 10px 0 10px 48px;
+        margin: 0;
+    }
+    .section-guarantee .text-holder p + p {
+        margin: 25px 0 0;
+    }
+    
 }
