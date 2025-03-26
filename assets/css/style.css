@@ -733,6 +733,19 @@ h6 {
     flex-wrap: wrap;
     margin: 0 0 40px;
 }
+.plan-row.monthly .plan-item-wrap:not(.plan-agency) {
+    display: none;
+}
+.plan-row.monthly .plan-item .btn {
+    background-color: var(--primary-color);
+}
+.plan-row.annually .monthly-text,
+.plan-row.monthly .annually-text {
+    display: none;
+}
+.plan-row.monthly .monthly-text {
+    display: inline-block;
+}
 .plan-item-wrap {
     width: 100%;
     max-width: 500px;

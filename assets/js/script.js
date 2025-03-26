@@ -17,22 +17,39 @@ document.addEventListener("DOMContentLoaded", function () {
     //plans
     const annuallyBtn = document.getElementById("annuallyBtn");
     const monthlyBtn = document.getElementById("monthlyBtn");
-    const prices = document.querySelectorAll(".priceItemJs");
-    function updatePrices(planType) {
-        prices.forEach(price => {
-            const newPrice = price.getAttribute(`data-${planType}`);
-            price.textContent = newPrice;
-        });
-    }
+    const planRows = document.querySelectorAll(".plan-row");
+    const planAgencyBtn = document.querySelector(".planAgencyBtn");
+
+    // const prices = document.querySelectorAll(".priceItemJs");
+    // function updatePrices(planType) {
+    //     prices.forEach(price => {
+    //         const newPrice = price.getAttribute(`data-${planType}`);
+    //         price.textContent = newPrice;
+    //     });
+    // }
     annuallyBtn.addEventListener("click", function () {
         annuallyBtn.classList.add("active");
         monthlyBtn.classList.remove("active");
-        updatePrices("annually");
+        // updatePrices("annually");
+        
+        planRows.forEach(row => {
+            row.classList.remove("monthly");
+            row.classList.add("annually");
+        });
+
+        planAgencyBtn.setAttribute("href", "https://handsomewp.com/handsome-checkout/hcc-ua/"); 
     });
     monthlyBtn.addEventListener("click", function () {
         monthlyBtn.classList.add("active");
         annuallyBtn.classList.remove("active");
-        updatePrices("monthly");
+        // updatePrices("monthly");
+        
+        planRows.forEach(row => {
+            row.classList.remove("annually");
+            row.classList.add("monthly");
+        });
+
+        planAgencyBtn.setAttribute("href", "https://handsomewp.com/handsome-checkout/hcc-um/"); 
     });
 
     //faqs
@@ -47,4 +64,17 @@ document.addEventListener("DOMContentLoaded", function () {
             item.classList.toggle("active");
         });
     });
+
+    //anchor smooth
+    const anchors = document.querySelectorAll('a[href*="#"]')
+    for (let anchor of anchors) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault()
+            const blockID = anchor.getAttribute('href').substr(1)
+            document.getElementById(blockID).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
+        })
+    }
 });
