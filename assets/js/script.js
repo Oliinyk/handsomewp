@@ -117,3 +117,34 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 });
+
+// Video download feature
+// window.loadVideo = function() {
+//     document.getElementById('video-thumbnail').style.display = 'none';
+//     document.getElementsByClassName('.play-btn').style.display = 'none';
+//     const iframe = document.getElementById('video-frame');
+//     iframe.style.display = 'block';
+//     iframe.src = "https://player.vimeo.com/video/327955315?autoplay=1";
+// }
+
+// Функція для завантаження відео
+window.loadVideo = function() {
+    // Ховаємо зображення-заглушку
+    const thumbnail = document.querySelector('.video-placeholder');
+    if (thumbnail) {
+        thumbnail.style.display = 'none';
+    }
+
+    // Ховаємо кнопку "Play"
+    const playBtn = document.querySelector('.play-btn');
+    if (playBtn) {
+        playBtn.style.display = 'none';
+    }
+
+    // Показуємо iframe з відео
+    const iframe = document.querySelector('.video-frame');
+    if (iframe) {
+        iframe.style.display = 'block';
+        iframe.src = "https://player.vimeo.com/video/327955315?autoplay=1";
+    }
+}
