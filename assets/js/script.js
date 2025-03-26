@@ -13,6 +13,28 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+    
+    //header submenu
+    const navMenu = document.querySelector(".nav-menu");
+    const navMenuItems = document.querySelectorAll(".nav-menu .menu-item");
+
+    navMenuItems.forEach(item => {
+        item.addEventListener("click", function (event) {
+            event.stopPropagation();
+            navMenuItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove("active");
+                }
+            });
+            item.classList.toggle("active");
+        });
+    });
+    // click outside menu
+    document.addEventListener("click", function (event) {
+        if (!navMenu.contains(event.target)) {
+            navMenuItems.forEach(item => item.classList.remove("active"));
+        }
+    });
 
     //plans
     const annuallyBtn = document.getElementById("annuallyBtn");

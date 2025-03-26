@@ -176,7 +176,7 @@ h6 {
 .site-header {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 17px 30px;
+    padding: 10px 30px;
 }
 .header-wrap {
     display: flex;
@@ -196,17 +196,49 @@ h6 {
 }
 .nav-menu li a {
     display: flex;
+    align-items: center;
+    gap: 5px;
     color: var(--primary-dark);
 }
-.nav-menu li a:hover {
+.nav-menu li a:hover,
+.nav-menu > .menu-item.active > a {
     color: var(--primary-color);
 }
-.nav-menu li a > svg {
+.nav-menu li a > .arrow-ico {
     fill: var(--primary-dark);
     transition: all .25s;
+    height: 6px;
+    width: 12px;
 }
-.nav-menu li a:hover > svg {
+.nav-menu li a:hover > svg,
+.nav-menu > .menu-item.active > a svg {
     fill: var(--primary-color);
+}
+.nav-menu > .menu-item.active > a .arrow-ico {
+    transform: rotate(180deg);
+}
+.nav-menu .sub-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+    background-color: var(--white);
+    padding: 20px;
+    gap: 15px;
+    width: 250px;
+    font-size: 14px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+/* .nav-menu .menu-item:hover > .sub-menu, */
+.nav-menu .menu-item.active > .sub-menu {
+    display: flex;
+}
+.nav-menu > .menu-item {
+    position: relative;
+    padding: 17px 0;
 }
 .header-ico {
     max-width: 24px;
@@ -1276,7 +1308,7 @@ h6 {
     .site-header.is-active .main-menu {
         opacity: 1;
         visibility: visible;
-        padding: 10px 0;
+        padding: 20px 0;
     }
     .is-active .mobmenu .burger:after {
         transform: rotate(-45deg);
@@ -1312,7 +1344,7 @@ h6 {
         -webkit-box-shadow: 0px 0px 6px -3px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 0px 0px 6px -3px rgba(0, 0, 0, 0.75);
         box-shadow: 0px 0px 6px -3px rgba(0, 0, 0, 0.75);
-        top: 85px;
+        top: 75px;
         border-radius: 3px;
         justify-content: center;
     }
@@ -1320,5 +1352,23 @@ h6 {
         flex-direction: column;
         width: 100%;
         margin: 0;
+    }
+    .nav-menu > .menu-item {
+        padding: 0;
+        width: 100%;
+    }
+    .nav-menu .sub-menu {
+        position: relative;
+        width: 100%;
+        box-shadow: none;
+        border-top: 1px solid var(--gray-light);
+        border-bottom: 1px solid var(--gray-light);
+        border-radius: 0;
+    }
+    .nav-menu .menu-item.active > .sub-menu {
+        margin: 12px 0 0;
+    }
+    .nav-menu li a {
+        justify-content: center;
     }
 }
