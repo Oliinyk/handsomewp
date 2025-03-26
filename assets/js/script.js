@@ -19,37 +19,50 @@ document.addEventListener("DOMContentLoaded", function () {
     const monthlyBtn = document.getElementById("monthlyBtn");
     const planRows = document.querySelectorAll(".plan-row");
     const planAgencyBtn = document.querySelector(".planAgencyBtn");
+    const planUpsellsAgencyBtn = document.querySelector(".planUpsellsAgencyBtn");
 
-    // const prices = document.querySelectorAll(".priceItemJs");
-    // function updatePrices(planType) {
-    //     prices.forEach(price => {
-    //         const newPrice = price.getAttribute(`data-${planType}`);
-    //         price.textContent = newPrice;
-    //     });
-    // }
+    
+    const prices = document.querySelectorAll(".priceItemJs");
+    function updatePrices(planType) {
+        prices.forEach(price => {
+            const newPrice = price.getAttribute(`data-${planType}`);
+            price.textContent = newPrice;
+        });
+    }
+
     annuallyBtn.addEventListener("click", function () {
         annuallyBtn.classList.add("active");
         monthlyBtn.classList.remove("active");
-        // updatePrices("annually");
+        updatePrices("annually");
         
         planRows.forEach(row => {
             row.classList.remove("monthly");
             row.classList.add("annually");
         });
 
-        planAgencyBtn.setAttribute("href", "https://handsomewp.com/handsome-checkout/hcc-ua/"); 
+        if(planAgencyBtn) {
+            planAgencyBtn.setAttribute("href", "https://handsomewp.com/handsome-checkout/hcc-ua/");
+        }
+        if(planUpsellsAgencyBtn) {
+            planUpsellsAgencyBtn.setAttribute("href", "https://handsomewp.com/handsome-checkout/ocu-ua/");
+        }
     });
     monthlyBtn.addEventListener("click", function () {
         monthlyBtn.classList.add("active");
         annuallyBtn.classList.remove("active");
-        // updatePrices("monthly");
+        updatePrices("monthly");
         
         planRows.forEach(row => {
             row.classList.remove("annually");
             row.classList.add("monthly");
         });
 
-        planAgencyBtn.setAttribute("href", "https://handsomewp.com/handsome-checkout/hcc-um/"); 
+        if(planAgencyBtn) {
+            planAgencyBtn.setAttribute("href", "https://handsomewp.com/handsome-checkout/hcc-um/");
+        }
+        if(planUpsellsAgencyBtn) {
+            planUpsellsAgencyBtn.setAttribute("href", "https://handsomewp.com/handsome-checkout/ocu-um/");
+        }
     });
 
     //faqs

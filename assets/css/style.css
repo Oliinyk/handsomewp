@@ -164,6 +164,12 @@ h6 {
     padding-left: 15px;
     padding-right: 15px;
 }
+.dark-bg {
+    background-color: var(--dark);
+}
+.dark-bg .section-title {
+    color: var(--white);
+}
 
 /* header */
 
@@ -292,6 +298,10 @@ h6 {
     font-size: 18px;
     text-align: center;
     font-weight: 500;
+    line-height: 1.5;
+}
+.section-hero .font-medium {
+    font-weight: 600;
 }
 .section-hero .video-wrap {
     margin: 48px auto 28px;
@@ -474,6 +484,11 @@ h6 {
     grid-auto-rows: auto;
     gap: 1rem;
 }
+.section-testimonials .btn-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 0;
+}
 .quote-alert {
     color: var(--primary-dark);
     background-color: var(--white);
@@ -611,10 +626,6 @@ h6 {
 }
 
 /* section-img-text */
-/* .section-img-text {
-    background-color: var(--dark);
-    border-top: 6px solid var(--primary-color);
-} */
 .section-img-text .inner-wrap {
     max-width: 500px;
     margin: 0 auto;
@@ -981,6 +992,9 @@ h6 {
     .section-hero .text-holder .btn {
         margin: 20px 0 28px;
     }
+    .section-hero .font-medium {
+        font-size: 22px;
+    }
     .section-integrations {
         padding: 50px 0 70px;
         border-radius: 16px;
@@ -1037,6 +1051,9 @@ h6 {
     .section-testimonials {
         padding: 30px 0 120px;
     }
+    .section-testimonials.dark-bg {
+        padding: 45px 0 60px;
+    }
     .section-testimonials .inner-wrap {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -1045,6 +1062,22 @@ h6 {
     }
     .bg-effect::after {
         height: 156px;
+    }
+    .bg-effect-middle::after {
+        background-color: var(--white);
+    }
+    .bg-effect-middle::before {
+        content: '';
+        background-color: var(--gray-light);
+        position: absolute;
+        top: -32px;
+        left: 20px;
+        right: 20px;
+        height: 162px;
+        width: calc(100% - 40px);
+        z-index: 1;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
     }
     .section-products .product-title {
         font-size: 30px;
