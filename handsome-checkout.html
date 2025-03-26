@@ -9,39 +9,70 @@
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
-        <header class="header">
+        <header class="header v2">
             <div class="container">
                 <div class="header-wrap">
                     <a href="/" class="logo">
-                        <img src="./assets/images/cm-logo.svg" alt="conversion-magic" class="img-fluid">
+                        <picture>
+                            <source srcset="./assets/images/2x/webp/cm-logo@2x.webp 2x, ./assets/images/webp/cm-logo.webp 1x" type="image/webp">
+                            <source srcset="./assets/images/2x/cm-logo@2x.png 2x, ./assets/images/cm-logo.png 1x" type="image/png">
+                            <img src="./assets/images/cm-logo.png" alt="conversion-magic" loading="lazy" class="img-fluid">
+                        </picture>
                     </a>
-                    <ul class="nav-menu">
-                        <li><a href="">Our Products</a></li>
-                        <li>
-                            <a href="https://handsomewp.com/my-account/">Member Login</a>
-                            <ul class="nav-sub-menu">
-                                <li><a href="https://handsomewp.com/my-downloads-keys/">My Downloads & Keys</a></li>
-                                <li><a href="https://handsomewp.com/affiliate-area/">Affiliate Area</a></li>
-                                <li><a href="https://handsomewp.com/handsome-checkout-video-guides/">Handsome Checkout Video Guides</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="https://handsomewp.com/documentation/">Docs</a></li>
-                        <li><a href="https://handsomewp.com/blog/">Blog</a></li>
-                        <li><a href="">Contact us</a></li>
-                        <li><a href="https://www.youtube.com/channel/UCmN-nDJofQklV5WOCttO52w/videos"></a></li>
-                        <li><a href="https://www.instagram.com/handsomewp.plugins/"></a></li>
-                    </ul>
                 </div>
             </div>
         </header>
 
-
-
-
-
-
-        <section class="section section-img-text">
+        <section class="section section-hero section-video">
             <div class="container">
+                <h1 class="section-title">
+                    Learn How Get More Completed Orders in Your <span class="primary">Woocommerce</span> Store in the Next 24 Hours
+                </h1>
+                <p class="section-subtitle uppercase">NO CODING SKILLS REQUITED</p>
+
+                <div class="video-wrap" style="position: relative; padding-bottom: 56.25%; height: 0;">
+                    <iframe src="https://player.vimeo.com/video/327955315" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                </div>
+
+                <div class="wrap-btn">
+                    <a href="#pricing" class="btn">Try Now</a>
+                    <a href="https://demo.handsomewp.com/wp-login.php" class="btn light-btn">Admin Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-img-text bg-effect">
+            <div class="container">
+                <div class="quote-alert">
+                    <div class="hide-sm-max">
+                        <picture>
+                            <source srcset="./assets/images/2x/webp/rudy-mawyer@2x.webp 2x, ./assets/images/webp/rudy-mawyer.webp 1x" type="image/webp">
+                            <source srcset="./assets/images/2x/rudy-mawyer@2x.png 2x, ./assets/images/rudy-mawyer.png 1x" type="image/png">
+                            <img src="./assets/images/rudy-mawyer.png" alt="rudy-mawyer" loading="lazy" class="img-fluid author-avatar">
+                        </picture>
+                    </div>
+                    <div class="quote-descript">
+                        <div class="quote">
+                            <svg class="quote-ico"><use xlink:href="#quote"></use></svg>
+                            <h4 class="quote-title">“Sales jumped over 100%…“</h4>
+                            <blockquote>“Our sales jumped over 100% as soon as we started using Handsome Checkout and One Click Upsells. Total game changer for our business.”​</blockquote>
+                        </div>
+                        <div class="hide-sm-min">
+                            <picture>
+                                <source srcset="./assets/images/2x/webp/rudy-mawyer@2x.webp 2x, ./assets/images/webp/rudy-mawyer.webp 1x" type="image/webp">
+                                <source srcset="./assets/images/2x/rudy-mawyer@2x.png 2x, ./assets/images/rudy-mawyer.png 1x" type="image/png">
+                                <img src="./assets/images/rudy-mawyer.png" alt="rudy-mawyer" loading="lazy" class="img-fluid author-avatar">
+                            </picture>
+                        </div>
+                        <div class="author">
+                            <div class="author-info">
+                                <h4>RUDY MAWYER</h4>
+                                <p>Elite Sports Nutritionist & Trainer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <h2 class="section-title">What Else Comes With Handsome Checkout?</h2>
                 <div class="inner-wrap">
                     <article class="img-text-item">
@@ -395,7 +426,6 @@
         <section class="section section-quote">
             <div class="container">
                 <h2 class="section-title">What Are Members Saying?</h2>
-
 
                 <div class="inner-wrap">
                     <div class="quote-item">
