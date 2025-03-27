@@ -16,7 +16,7 @@
                         <picture>
                             <source srcset="./assets/images/2x/webp/cm-logo@2x.webp 2x, ./assets/images/webp/cm-logo.webp 1x" type="image/webp">
                             <source srcset="./assets/images/2x/cm-logo@2x.png 2x, ./assets/images/cm-logo.png 1x" type="image/png">
-                            <img src="./assets/images/cm-logo.png" alt="conversion-magic" loading="lazy" class="img-fluid">
+                            <img src="./assets/images/cm-logo.png" alt="conversion-magic" class="img-fluid" loading="eager" decoding="async">
                         </picture>
                     </a>
                 </div>
@@ -720,7 +720,7 @@
             </div>
         </footer>
 
-        <div class="main_svg" hidden="">
+        <div class="main_svg" hidden>
             <svg>
                 <defs>
                     <symbol id="quote" viewBox="0 0 50 28" fill="none" xmlns="http://www.w3.org/2000/svg">
