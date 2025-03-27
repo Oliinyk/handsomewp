@@ -337,6 +337,7 @@ h6 {
 }
 .section-hero .font-medium {
     font-weight: 600;
+    font-size: 16px;
 }
 .section-hero .video-wrap {
     position: relative;
