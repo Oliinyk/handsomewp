@@ -127,21 +127,21 @@ document.addEventListener("DOMContentLoaded", function () {
 //     iframe.src = "https://player.vimeo.com/video/327955315?autoplay=1";
 // }
 
-// Функція для завантаження відео
+// Video download function
 window.loadVideo = function() {
-    // Ховаємо зображення-заглушку
+    // Hiding the stub image
     const thumbnail = document.querySelector('.video-placeholder');
     if (thumbnail) {
         thumbnail.style.display = 'none';
     }
 
-    // Ховаємо кнопку "Play"
+    // Hide the "Play" button
     const playBtn = document.querySelector('.play-btn');
     if (playBtn) {
         playBtn.style.display = 'none';
     }
 
-    // Показуємо iframe з відео
+    // Showing an iframe with a video
     const iframe = document.querySelector('.video-frame');
     if (iframe) {
         iframe.style.display = 'block';

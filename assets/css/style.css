@@ -72,7 +72,7 @@ h6 {
     font-family: 'Barlow', sans-serif;
     display: block;
     border-radius: 39px;
-    padding: 20px 30px;
+    padding: 20px 20px;
     font-size: 20px;
     line-height: 1;
     font-weight: 700;
@@ -306,7 +306,7 @@ h6 {
     padding: 15px 0 0;
 }
 .header.v2 .logo {
-    max-width: 292px;
+    max-width: 220px;
     margin: 0 auto;
 }
 
@@ -326,8 +326,11 @@ h6 {
     font-size: 22px;
     margin: 0 auto 35px;
 }
+.section-video .section-title {
+    margin: 0 auto 12px;
+}
 .section-hero .section-subtitle {
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
     font-weight: 500;
     line-height: 1.5;
@@ -339,7 +342,7 @@ h6 {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
-    margin: 48px auto 28px;
+    margin: 16px auto 28px;
 }
 .video-placeholder {
     position: absolute;
@@ -394,7 +397,7 @@ h6 {
     padding: 30px 0;
 }
 .section-title {
-    font-size: 18px;
+    font-size: 28px;
     line-height: 1.4;
     text-align: center;
     margin-top: 0;
@@ -702,21 +705,21 @@ h6 {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 0 0 20px;
+    margin: 0 0 30px;
 }
 .section-img-text .item-title {
     color: var(--primary-color);
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.4;
     margin-bottom: 10px;
 }
 .section-img-text .text-holder {
     color: var(--white);
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
 }
 .section-img-text .btn-wrap {
-    padding: 17px 0 0;
+    padding: 0;
 }
 .section-ico-text .btn-wrap {
     padding: 40px 0 0;
@@ -741,16 +744,20 @@ h6 {
 .section-ico-text .inner-wrap {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 30px 0;
+    gap: 50px 0;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 30px auto 0;
 }
 .section-ico-text .ico-text-item {
     display: flex;
+
+    flex-direction: column;
+    align-items: center;
 }
 .section-ico-text .ico-holder {
     height: 60px;
     width: 60px;
+    margin: 0 0 8px;
 }
 .section-ico-text .item-title {
     color: var(--primary-color);
@@ -760,9 +767,10 @@ h6 {
 }
 .section-ico-text .text-holder {
     color: var(--white);
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
-    padding: 0 0 0 20px;
+    padding: 0;
+    text-align: center;
 }
 
 /* section-guarantee */
@@ -780,12 +788,13 @@ h6 {
 .section-guarantee .text-holder {
     line-height: 1.5;
     margin: 25px 0 0;
+    text-align: center;
 }
 .section-guarantee .img-holder {
     margin: 0 auto;
 }
 .section-guarantee .img-holder img {
-    max-width: 130px;
+    max-width: 180px;
 }
 .section-guarantee .text-holder p + p {
     margin: 15px 0 0;
@@ -826,9 +835,6 @@ h6 {
     padding: 25px 30px 35px;
     margin-top: 30px;
 }
-.plan-item-wrap.active {
-    order: -1;
-}
 .plan-item-wrap.active .plan-item {
     background-color: var(--dark);
     color: var(--white);
@@ -836,14 +842,16 @@ h6 {
 .section-plan .btn-wrap {
     display: flex;
     justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
 }
 .btn-check {
     border: 1px solid var(--dark);
     color: var(--primary-dark);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
-    height: 40px;
-    width: 90px;
+    height: 50px;
+    width: 50%;
 }
 .btn-check.active {
     background-color: var(--dark);
@@ -859,12 +867,12 @@ h6 {
     border-left: 0;
 }
 .plan-item .plan-heading {
-    font-size: 30px;
+    font-size: 44px;
     margin: 0 0 10px;
     text-align: center;
 }
 .plan-item .plan-price {
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
     font-weight: 700;
     margin: 0 0 15px;
@@ -877,7 +885,7 @@ h6 {
     padding-left: 42px;
     font-size: 14px;
     line-height: 1.5;
-    margin: 0 0 10px;
+    margin: 0 0 16px;
 }
 .plan-item .plan-list li:after {
     content: '';
@@ -1020,6 +1028,12 @@ h6 {
     .container {
         max-width: 970px;
     }
+    .btn {
+        padding: 20px 30px;
+    }
+    .header.v2 .logo {
+        max-width: 292px;
+    }
     .text-holder {
         font-size: 18px;
     }
@@ -1036,6 +1050,12 @@ h6 {
     }
     .section-video .section-title {
         margin: 0 auto 25px;
+    }
+    .section-hero .section-subtitle {
+        font-size: 18px;
+    }
+    .section-hero .video-wrap {
+        margin: 48px auto 28px;
     }
     .hero-img {
         max-width: 50%;
@@ -1201,20 +1221,22 @@ h6 {
     .section-img-text .img-text-item:nth-child(2n+1) .text-holder {
         padding-left: 20px;
     }
-    .section-img-text .text-holder {
-        width: 45%;
-    }
     .section-img-text .item-title {
         font-size: 30px;
         margin-bottom: 20px;
     }
     .section-img-text .text-holder {
         font-size: 18px;
+        width: 45%;
+    }
+    .section-img-text .btn-wrap {
+        padding: 17px 0 0;
     }
     .section-ico-text .inner-wrap {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px 25px;
         max-width: 100%;
+        margin: 0 auto;
     }
     .section-ico-text .item-title {
         font-size: 24px;
@@ -1223,10 +1245,14 @@ h6 {
     .section-ico-text .text-holder {
         font-size: 18px;
         padding: 10px 0 0 40px;
+        text-align: left;
     }
     .section-ico-text .ico-holder {
-        height: 60px;
-        width: 60px;
+        margin: 0;
+    }
+    .section-ico-text .ico-text-item {
+        flex-direction: row;
+        align-items: flex-start;
     }
     .section-guarantee .guarantee-item {
         padding: 40px 48px;
@@ -1239,12 +1265,13 @@ h6 {
         font-size: 18px;
         padding: 10px 0 10px 48px;
         margin: 0;
+        text-align: left;
     }
     .section-guarantee .text-holder p + p {
         margin: 25px 0 0;
     }
     .section-plan .btn-check-wrap {
-        margin: 0 0 38px;
+        margin: 0 auto 38px;
     }
     .section-plan .btn-check {
         font-size: 18px;
@@ -1263,7 +1290,6 @@ h6 {
     }
     .plan-item-wrap.active {
         position: relative;
-        order: 0;
     }
     .plan-item-wrap.active .plan-item {
         position: absolute;
@@ -1282,9 +1308,6 @@ h6 {
     }
     .plan-item .plan-list {
         margin: 0 0 40px;
-    }
-    .plan-item .plan-list li {
-        margin: 0 0 16px;
     }
     .plan-item-wrap.active .plan-list {
         margin: 0 0 57px;
