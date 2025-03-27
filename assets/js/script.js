@@ -118,15 +118,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Video download feature
-// window.loadVideo = function() {
-//     document.getElementById('video-thumbnail').style.display = 'none';
-//     document.getElementsByClassName('.play-btn').style.display = 'none';
-//     const iframe = document.getElementById('video-frame');
-//     iframe.style.display = 'block';
-//     iframe.src = "https://player.vimeo.com/video/327955315?autoplay=1";
-// }
-
 // Video download function
 window.loadVideo = function() {
     // Hiding the stub image
@@ -146,5 +137,12 @@ window.loadVideo = function() {
     if (iframe) {
         iframe.style.display = 'block';
         iframe.src = "https://player.vimeo.com/video/327955315?autoplay=1";
+    }
+
+    // Showing an iframe with a video - upsell page
+    const iframeUpsell = document.querySelector('.video-upsell');
+    if (iframeUpsell) {
+        iframeUpsell.style.display = 'block';
+        iframeUpsell.src = "https://player.vimeo.com/video/318709498?autoplay=1";
     }
 }
